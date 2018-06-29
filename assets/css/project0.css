@@ -196,8 +196,7 @@
 .angle--color {
   color: #333;
   background-color: #ffed4a;
-  text-align: center;
-  padding: 10% 0;
+  padding: 5rem 0;
 }
 
 /* CSS Tricks - https://codepen.io/team/css-tricks/pen/mVZGKa */
@@ -270,8 +269,14 @@ h6 {
   text-transform: uppercase;
 }
 
-footer, #menu, #about, #highlights {
+footer, #why,
+#highlights,
+#about,
+#appetizers,
+#burgers,
+#drinks {
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* Document */
@@ -343,6 +348,7 @@ li,
 /* Navbar */
 .navbar {
   border-top: 0.25rem solid #ffed4a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .navbar .nav-link {
   border-bottom: 0.25rem solid #333;
@@ -402,25 +408,17 @@ li,
   margin-top: 58px;
 }
 
-/* Why */
-#why {
-  padding: 2rem 0;
-}
-#why h2 {
+/* Sections */
+#why h2,
+#highlights h2,
+#about h2,
+#appetizers h2,
+#burgers h2,
+#drinks h2 {
   margin-bottom: 2rem;
 }
 
-/* Highlights */
-#highlights h2 {
-  margin-bottom: 2rem;
-}
-
-/* About */
-/* Menu */
 /* Footer */
-footer {
-  padding-bottom: 1rem;
-}
 footer .copyright {
   text-align: right;
 }
@@ -436,7 +434,7 @@ footer .social-icons svg:last-child {
 }
 
 footer.angle--color {
-  padding: 5rem 0 1rem;
+  padding: 6rem 0 2rem;
 }
 
 /* Media Queries */

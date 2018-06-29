@@ -24,8 +24,9 @@ $shadow2: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   text-transform: uppercase;
 }
 
-%padding-top {
+%padding-top-bottom {
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* Document */
@@ -103,6 +104,7 @@ li,
 
 .navbar {
   border-top: 0.25rem solid $yellow;
+  box-shadow: $shadow;
   .nav-link {
     border-bottom: 0.25rem solid $black;
     padding: 0.5rem 1rem 0.25rem 1rem;
@@ -178,41 +180,24 @@ li,
   }
 }
 
-/* Why */
+/* Sections */
 
-#why {
-  padding: 2rem 0;
+#why,
+#highlights,
+#about,
+#appetizers,
+#burgers,
+#drinks {
+  @extend %padding-top-bottom;
   h2 {
     margin-bottom: 2rem;
   }
-}
-
-/* Highlights */
-
-#highlights {
-  @extend %padding-top;
-  h2 {
-    margin-bottom: 2rem;
-  }
-}
-
-/* About */
-
-#about {
-  @extend %padding-top;
-}
-
-/* Menu */
-
-#menu {
-  @extend %padding-top;
 }
 
 /* Footer */
 
 footer {
-  @extend %padding-top;
-  padding-bottom: 1rem;
+  @extend %padding-top-bottom;
 
   .copyright {
     @extend %uppercase;
@@ -234,7 +219,7 @@ footer {
 }
 
 footer.angle--color {
-  padding: 5rem 0 1rem;
+  padding: 6rem 0 2rem;
 }
 
 /* Media Queries */
