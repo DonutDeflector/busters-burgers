@@ -270,7 +270,7 @@ h6 {
   text-transform: uppercase;
 }
 
-footer, #about, #highlights {
+footer, #menu, #about, #highlights {
   padding-top: 2rem;
 }
 
@@ -285,6 +285,11 @@ body {
   font-size: 10px;
   background-color: #333;
   color: #d6dae4;
+}
+
+::selection {
+  background-color: #fcfbeb;
+  color: #333;
 }
 
 /* Text */
@@ -312,6 +317,7 @@ h3 {
 span,
 p,
 a,
+li,
 .figure-caption {
   font-size: 1.6rem;
 }
@@ -319,6 +325,10 @@ a,
 /* Misc Classes */
 .center-text {
   text-align: center;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 /* Bootstrap Overrides */
@@ -406,6 +416,7 @@ a,
 }
 
 /* About */
+/* Menu */
 /* Footer */
 footer {
   padding-bottom: 1rem;

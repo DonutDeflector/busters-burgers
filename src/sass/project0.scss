@@ -9,6 +9,7 @@ $white: #d6dae4;
 $black: #333;
 $yellow: #ffed4a;
 $yellow2: #fff382;
+$yellow3: #fcfbeb;
 
 $shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 $shadow2: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -41,6 +42,11 @@ body {
   color: $white;
 }
 
+::selection {
+  background-color: $yellow3;
+  color: $black;
+}
+
 /* Text */
 
 h1,
@@ -68,6 +74,7 @@ h3 {
 span,
 p,
 a,
+li,
 .figure-caption {
   font-size: 1.6rem;
 }
@@ -76,6 +83,10 @@ a,
 
 .center-text {
   text-align: center;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 /* Bootstrap Overrides */
@@ -188,6 +199,12 @@ a,
 /* About */
 
 #about {
+  @extend %padding-top;
+}
+
+/* Menu */
+
+#menu {
   @extend %padding-top;
 }
 
