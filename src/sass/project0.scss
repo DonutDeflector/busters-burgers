@@ -1,0 +1,181 @@
+/* Variables */
+
+$white: #d6dae4;
+$black: #333;
+$yellow: #ffed4a;
+$yellow2: #fff382;
+
+/* Extensions */
+
+%transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Document */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  background-color: $black;
+  color: $white;
+}
+
+/* Text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+span,
+p,
+a {
+  font-size: 1.6rem;
+}
+
+/* Misc Classes */
+
+.center-text {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Bootstrap Overrides */
+
+.bg-dark {
+  background-color: $black !important;
+}
+
+.container {
+  max-width: 1440px !important;
+}
+
+/* Navbar */
+
+.navbar {
+  border-top: 0.25rem solid $yellow;
+  .nav-link {
+    text-transform: uppercase;
+    @extend %transition;
+    border-bottom: 0.25rem solid $black;
+    padding: 0.5rem 1rem 0.25rem 1rem;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    border-bottom: 0.25rem solid $yellow;
+  }
+}
+
+.navbar-dark {
+  .navbar-toggler {
+    color: var(--white);
+    border: none;
+  }
+  .navbar-brand {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2rem;
+    @extend %transition;
+  }
+}
+
+/* Hero */
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(21, 21, 21, 0.5),
+      rgba(21, 21, 21, 0.9)
+    ),
+    url(https://source.unsplash.com/FlmXvqlD-nI);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+
+  .hero-text {
+    padding: 0 1rem;
+  }
+
+  .subheading-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-button {
+    color: $black;
+    background: $yellow;
+    padding: 0.5rem 0.7rem;
+    @extend %transition;
+  }
+
+  .hero-button:hover,
+  .hero-button:focus {
+    color: $black;
+    background: $yellow2;
+    text-decoration: none;
+  }
+}
+
+/* Why */
+
+#why {
+  padding: 2rem 0;
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Pictures */
+
+#pictures {
+}
+
+/* Media Queries */
+
+@media (max-width: 400px) {
+  .subheading-text {
+    display: block;
+  }
+  .navbar-dark {
+    .navbar-brand {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
