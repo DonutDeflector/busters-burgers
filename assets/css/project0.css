@@ -1,7 +1,277 @@
+/* Imports */
+.angle--top-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%)) {
+  .angle--top-left::before, .angle--top-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--top-left::before {
+    top: 0;
+    border-width: 5vw 100vw 0 0;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+}
+
+.angle--top-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 100%)) {
+  .angle--top-right::before, .angle--top-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--top-right::before {
+    top: 0;
+    border-width: 5vw 0 0 100vw;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+}
+
+.angle--bottom-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 4vw));
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 4vw))) {
+  .angle--bottom-left::before, .angle--bottom-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--bottom-left::after {
+    bottom: 0;
+    border-width: 0 100vw 5vw 0;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--bottom-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%)) {
+  .angle--bottom-right::before, .angle--bottom-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--bottom-right::after {
+    bottom: 0;
+    border-width: 0 0 5vw 100vw;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-left-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 calc(100% - 4vw));
+}
+@supports not (clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 calc(100% - 4vw))) {
+  .angle--both-left-left::before, .angle--both-left-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-left-left::before {
+    top: 0;
+    border-width: 5vw 100vw 0 0;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-left-left::after {
+    bottom: 0;
+    border-width: 0 100vw 5vw 0;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-right-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% calc(100% - 4vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% calc(100% - 4vw), 0 100%)) {
+  .angle--both-right-right::before, .angle--both-right-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-right-right::before {
+    top: 0;
+    border-width: 5vw 0 0 100vw;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-right-right::after {
+    bottom: 0;
+    border-width: 0 0 5vw 100vw;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-left-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% calc(100% - 4vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% calc(100% - 4vw), 0 100%)) {
+  .angle--both-left-right::before, .angle--both-left-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-left-right::before {
+    top: 0;
+    border-width: 5vw 100vw 0 0;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-left-right::after {
+    bottom: 0;
+    border-width: 0 0 5vw 100vw;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-right-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 calc(100% - 4vw));
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 calc(100% - 4vw))) {
+  .angle--both-right-left::before, .angle--both-right-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-right-left::before {
+    top: 0;
+    border-width: 5vw 0 0 100vw;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-right-left::after {
+    bottom: 0;
+    border-width: 0 100vw 5vw 0;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle__content {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.angle--color {
+  color: #333;
+  background-color: #ffed4a;
+  text-align: center;
+  padding: 10% 0;
+}
+
+/* CSS Tricks - https://codepen.io/team/css-tricks/pen/mVZGKa */
+.ribbon {
+  width: 80%;
+  position: relative;
+  background: #333;
+  color: #d6dae4;
+  text-align: center;
+  padding: 1rem;
+  /* Adjust to suit */
+  margin: 1rem auto;
+  /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+
+.ribbon:before,
+.ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.25em;
+  border: 1em solid #222;
+  z-index: -1;
+}
+
+.ribbon:before {
+  left: -1.5em;
+  border-right-width: 1em;
+  border-left-color: transparent;
+}
+
+.ribbon:after {
+  right: -1.5em;
+  border-left-width: 1em;
+  border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before,
+.ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #804f7c transparent transparent transparent;
+  bottom: -0.25em;
+}
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
+
 /* Variables */
 /* Extensions */
 .hero-container .hero-button, .navbar-dark .navbar-brand, .navbar .nav-link {
   transition: all 0.3s ease-in-out;
+}
+
+footer .copyright, .hero-container .hero-button, .hero-container .subheading-container, .navbar-dark .navbar-brand, .navbar .nav-link, h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+footer, #about, #highlights {
+  padding-top: 2rem;
 }
 
 /* Document */
@@ -25,7 +295,6 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -42,17 +311,14 @@ h3 {
 
 span,
 p,
-a {
+a,
+.figure-caption {
   font-size: 1.6rem;
 }
 
 /* Misc Classes */
 .center-text {
   text-align: center;
-}
-
-.uppercase {
-  text-transform: uppercase;
 }
 
 /* Bootstrap Overrides */
@@ -69,7 +335,6 @@ a {
   border-top: 0.25rem solid #ffed4a;
 }
 .navbar .nav-link {
-  text-transform: uppercase;
   border-bottom: 0.25rem solid #333;
   padding: 0.5rem 1rem 0.25rem 1rem;
 }
@@ -94,7 +359,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.9)), url(https://source.unsplash.com/FlmXvqlD-nI);
+  background-image: linear-gradient(rgba(21, 21, 21, 0.5), #151515), url(https://source.unsplash.com/FlmXvqlD-nI);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -120,6 +385,13 @@ a {
   text-decoration: none;
 }
 
+.hero-container-secondary {
+  height: 420px;
+}
+.hero-container-secondary .hero-text {
+  margin-top: 58px;
+}
+
 /* Why */
 #why {
   padding: 2rem 0;
@@ -128,7 +400,34 @@ a {
   margin-bottom: 2rem;
 }
 
-/* Pictures */
+/* Highlights */
+#highlights h2 {
+  margin-bottom: 2rem;
+}
+
+/* About */
+/* Footer */
+footer {
+  padding-bottom: 1rem;
+}
+footer .copyright {
+  text-align: right;
+}
+footer .social-icons {
+  display: inline-block;
+}
+footer .social-icons svg {
+  margin-right: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+footer .social-icons svg:last-child {
+  margin: 0;
+}
+
+footer.angle--color {
+  padding: 5rem 0 1rem;
+}
+
 /* Media Queries */
 @media (max-width: 400px) {
   .subheading-text {
@@ -142,6 +441,28 @@ a {
 @media (max-width: 768px) {
   h1 {
     font-size: 5rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 500px) {
+  .ribbon {
+    margin: 0.5rem auto 0;
+    width: 100%;
+  }
+
+  .ribbon:before,
+.ribbon:after {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .ribbon {
+    margin: 0.5rem auto 0;
+    width: 100%;
+  }
+
+  .ribbon:before,
+.ribbon:after {
+    display: none;
   }
 }
 

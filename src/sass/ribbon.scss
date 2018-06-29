@@ -1,0 +1,48 @@
+/* CSS Tricks - https://codepen.io/team/css-tricks/pen/mVZGKa */
+
+.ribbon {
+  width: 80%;
+
+  position: relative;
+  background: #333;
+  color: #d6dae4;
+  text-align: center;
+  padding: 1rem; /* Adjust to suit */
+  margin: 1rem auto; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before,
+.ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.25em;
+  border: 1em solid #222;
+  z-index: -1;
+}
+.ribbon:before {
+  left: -1.5em;
+  border-right-width: 1em;
+  border-left-color: transparent;
+}
+.ribbon:after {
+  right: -1.5em;
+  border-left-width: 1em;
+  border-right-color: transparent;
+}
+.ribbon .ribbon-content:before,
+.ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #804f7c transparent transparent transparent;
+  bottom: -0.25em;
+}
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
