@@ -17,7 +17,7 @@ $shadow2: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
 $selection: rgba(255, 237, 74, 0.5);
 
-/* Extensions */
+/* Extensions/Inheritance */
 
 %transition {
   transition: all 0.3s ease-in-out;
@@ -157,6 +157,7 @@ label,
   text-align: center;
 
   .hero-text {
+    margin-top: 58px;
     padding: 0 1rem;
   }
 
@@ -167,25 +168,12 @@ label,
 
   .hero-button {
     color: $black;
-    background: $yellow;
-    padding: 0.5rem 0.7rem;
-    @extend %transition;
     @extend %uppercase;
-  }
-
-  .hero-button:hover,
-  .hero-button:focus {
-    color: $black;
-    background: $yellow2;
-    text-decoration: none;
   }
 }
 
 .hero-container-secondary {
   height: 420px;
-  .hero-text {
-    margin-top: 58px;
-  }
 }
 
 /* Sections */
@@ -228,6 +216,11 @@ label,
 
 /* Forms */
 
+.btn {
+  border-radius: 0;
+  font-weight: 500;
+}
+
 .btn-yellow {
   background-color: $yellow;
   box-shadow: $shadow;
@@ -243,6 +236,7 @@ label,
 .form-control {
   background-color: $white;
   box-shadow: $shadow;
+  border-radius: 0;
   @extend %transition;
 }
 
