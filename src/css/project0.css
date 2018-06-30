@@ -1,0 +1,544 @@
+/* Imports */
+.angle--top-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%)) {
+  .angle--top-left::before, .angle--top-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--top-left::before {
+    top: 0;
+    border-width: 5vw 100vw 0 0;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+}
+
+.angle--top-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 100%)) {
+  .angle--top-right::before, .angle--top-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--top-right::before {
+    top: 0;
+    border-width: 5vw 0 0 100vw;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+}
+
+.angle--bottom-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 4vw));
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 4vw))) {
+  .angle--bottom-left::before, .angle--bottom-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--bottom-left::after {
+    bottom: 0;
+    border-width: 0 100vw 5vw 0;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--bottom-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%)) {
+  .angle--bottom-right::before, .angle--bottom-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--bottom-right::after {
+    bottom: 0;
+    border-width: 0 0 5vw 100vw;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-left-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 calc(100% - 4vw));
+}
+@supports not (clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 calc(100% - 4vw))) {
+  .angle--both-left-left::before, .angle--both-left-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-left-left::before {
+    top: 0;
+    border-width: 5vw 100vw 0 0;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-left-left::after {
+    bottom: 0;
+    border-width: 0 100vw 5vw 0;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-right-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% calc(100% - 4vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% calc(100% - 4vw), 0 100%)) {
+  .angle--both-right-right::before, .angle--both-right-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-right-right::before {
+    top: 0;
+    border-width: 5vw 0 0 100vw;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-right-right::after {
+    bottom: 0;
+    border-width: 0 0 5vw 100vw;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-left-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% calc(100% - 4vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% calc(100% - 4vw), 0 100%)) {
+  .angle--both-left-right::before, .angle--both-left-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-left-right::before {
+    top: 0;
+    border-width: 5vw 100vw 0 0;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-left-right::after {
+    bottom: 0;
+    border-width: 0 0 5vw 100vw;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle--both-right-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 calc(100% - 4vw));
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 4vw), 100% 100%, 0 calc(100% - 4vw))) {
+  .angle--both-right-left::before, .angle--both-right-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  .angle--both-right-left::before {
+    top: 0;
+    border-width: 5vw 0 0 100vw;
+    border-color: #ffed4a transparent transparent transparent;
+  }
+  .angle--both-right-left::after {
+    bottom: 0;
+    border-width: 0 100vw 5vw 0;
+    border-color: transparent transparent #ffed4a transparent;
+  }
+}
+
+.angle__content {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.angle--color {
+  color: #333;
+  background-color: #ffed4a;
+  padding: 5rem 0;
+}
+
+/* CSS Tricks - https://codepen.io/team/css-tricks/pen/mVZGKa */
+.ribbon {
+  width: 80%;
+  position: relative;
+  background: #333;
+  color: #d6dae4;
+  text-align: center;
+  padding: 1rem;
+  /* Adjust to suit */
+  margin: 1rem auto;
+  /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+
+.ribbon:before,
+.ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.25em;
+  border: 1em solid #222;
+  z-index: -1;
+}
+
+.ribbon:before {
+  left: -1.5em;
+  border-right-width: 1em;
+  border-left-color: transparent;
+}
+
+.ribbon:after {
+  right: -1.5em;
+  border-left-width: 1em;
+  border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before,
+.ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #804f7c transparent transparent transparent;
+  bottom: -0.25em;
+}
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
+
+/* Variables */
+/* Extensions/Inheritance */
+footer .social-icons svg, .form-control, .btn-yellow, .navbar-dark .navbar-brand, .navbar .nav-link {
+  transition: all 0.3s ease-in-out;
+}
+
+footer .copyright, .hero-container .hero-button, .hero-container .subheading-container, .navbar-dark .navbar-brand, .navbar .nav-link, h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+footer, #why,
+#highlights,
+#hours,
+#about,
+#appetizers,
+#burgers,
+#drinks,
+#contact {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Document */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  background-color: #333;
+  color: #d6dae4;
+}
+
+::selection {
+  background-color: #fcfbeb;
+  color: #333;
+}
+
+/* Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+span,
+p,
+a,
+li,
+td,
+th,
+label,
+.btn,
+.figure-caption,
+.form-control {
+  font-size: 1.6rem;
+}
+
+/* Misc Classes */
+.center-text {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Bootstrap Overrides */
+.bg-dark {
+  background-color: #333 !important;
+}
+
+.container {
+  max-width: 1440px !important;
+}
+
+/* Navbar */
+.navbar {
+  border-top: 0.25rem solid #ffed4a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.navbar .nav-link {
+  border-bottom: 0.25rem solid #333;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  border-bottom: 0.25rem solid #ffed4a;
+}
+
+.navbar-dark .navbar-toggler {
+  color: var(--white);
+  border: none;
+}
+.navbar-dark .navbar-brand {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Hero */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(21, 21, 21, 0.5), #151515), url(https://source.unsplash.com/FlmXvqlD-nI);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+.hero-container .hero-text {
+  margin-top: 58px;
+  padding: 0 1rem;
+}
+.hero-container .subheading-container {
+  margin-bottom: 1.5rem;
+}
+.hero-container .hero-button {
+  color: #333;
+}
+
+.hero-container-secondary {
+  height: 420px;
+}
+
+/* Sections */
+#why h2,
+#highlights h2,
+#hours h2,
+#about h2,
+#appetizers h2,
+#burgers h2,
+#drinks h2,
+#contact h2 {
+  margin-bottom: 2rem;
+}
+
+/* Contact */
+#contact button {
+  margin-bottom: 2rem;
+}
+
+/* Table */
+.table .thead-light th {
+  color: #333;
+  background-color: #d6dae4;
+  border-color: #d6dae4;
+}
+
+.table thead th {
+  border-bottom: 2px solid #d6dae4;
+}
+
+.table td,
+.table th {
+  border-top: 1px solid #d6dae4;
+}
+
+/* Forms */
+.btn {
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.btn-yellow {
+  background-color: #ffed4a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn:hover,
+.btn:focus {
+  background: #fff382;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.form-control {
+  background-color: #d6dae4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 0;
+}
+
+.form-control:focus {
+  background-color: #f1f5f8;
+  border-color: rgba(255, 237, 74, 0.5);
+  box-shadow: 0 1px 1px rgba(255, 237, 74, 0.5) inset, 0 0 8px rgba(255, 237, 74, 0.5);
+  outline: 0 none;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(3rem + 4px);
+}
+
+/* Images */
+img {
+  border: 0.5rem solid #f1f5f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Footer */
+footer .social-icons {
+  display: inline-block;
+}
+footer .social-icons a {
+  color: transparent;
+  margin-right: 1rem;
+}
+footer .social-icons a:last-child {
+  margin: 0;
+}
+footer .social-icons svg {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+footer .social-icons svg:hover,
+footer .social-icons svg:focus {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+footer.angle--color {
+  padding: 6rem 0 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+  .subheading-text {
+    display: block;
+  }
+
+  .navbar-dark .navbar-brand {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 500px) {
+  .ribbon {
+    margin: 0.5rem auto 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  .ribbon:before,
+.ribbon:after {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .ribbon {
+    margin: 0.5rem auto 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  .ribbon:before,
+.ribbon:after {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=project0.css.map */
