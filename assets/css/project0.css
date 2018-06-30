@@ -256,7 +256,7 @@
 
 /* Variables */
 /* Extensions */
-.hero-container .hero-button, .navbar-dark .navbar-brand, .navbar .nav-link {
+footer .social-icons svg, .form-control, .btn-yellow, .hero-container .hero-button, .navbar-dark .navbar-brand, .navbar .nav-link {
   transition: all 0.3s ease-in-out;
 }
 
@@ -271,10 +271,12 @@ h6 {
 
 footer, #why,
 #highlights,
+#hours,
 #about,
 #appetizers,
 #burgers,
-#drinks {
+#drinks,
+#contact {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -323,7 +325,12 @@ span,
 p,
 a,
 li,
-.figure-caption {
+td,
+th,
+label,
+.btn,
+.figure-caption,
+.form-control {
   font-size: 1.6rem;
 }
 
@@ -411,26 +418,87 @@ li,
 /* Sections */
 #why h2,
 #highlights h2,
+#hours h2,
 #about h2,
 #appetizers h2,
 #burgers h2,
-#drinks h2 {
+#drinks h2,
+#contact h2 {
   margin-bottom: 2rem;
 }
 
-/* Footer */
-footer .copyright {
-  text-align: right;
+/* Contact */
+#contact button {
+  margin-bottom: 2rem;
 }
+
+/* Table */
+.table .thead-light th {
+  color: #333;
+  background-color: #d6dae4;
+  border-color: #d6dae4;
+}
+
+.table thead th {
+  border-bottom: 2px solid #d6dae4;
+}
+
+.table td,
+.table th {
+  border-top: 1px solid #d6dae4;
+}
+
+/* Forms */
+.btn-yellow {
+  background-color: #ffed4a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn:hover,
+.btn:focus {
+  background: #fff382;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.form-control {
+  background-color: #d6dae4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.form-control:focus {
+  background-color: #f1f5f8;
+  border-color: rgba(255, 237, 74, 0.5);
+  box-shadow: 0 1px 1px rgba(255, 237, 74, 0.5) inset, 0 0 8px rgba(255, 237, 74, 0.5);
+  outline: 0 none;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(3rem + 4px);
+}
+
+/* Images */
+img {
+  border: 0.5rem solid #f1f5f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Footer */
 footer .social-icons {
   display: inline-block;
 }
-footer .social-icons svg {
+footer .social-icons a {
+  color: transparent;
   margin-right: 1rem;
+}
+footer .social-icons a:last-child {
+  margin: 0;
+}
+footer .social-icons svg {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-footer .social-icons svg:last-child {
-  margin: 0;
+footer .social-icons svg:hover,
+footer .social-icons svg:focus {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 footer.angle--color {

@@ -6,6 +6,7 @@
 /* Variables */
 
 $white: #d6dae4;
+$white2: #f1f5f8;
 $black: #333;
 $yellow: #ffed4a;
 $yellow2: #fff382;
@@ -13,6 +14,8 @@ $yellow3: #fcfbeb;
 
 $shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 $shadow2: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+$selection: rgba(255, 237, 74, 0.5);
 
 /* Extensions */
 
@@ -76,7 +79,12 @@ span,
 p,
 a,
 li,
-.figure-caption {
+td,
+th,
+label,
+.btn,
+.figure-caption,
+.form-control {
   font-size: 1.6rem;
 }
 
@@ -184,14 +192,76 @@ li,
 
 #why,
 #highlights,
+#hours,
 #about,
 #appetizers,
 #burgers,
-#drinks {
+#drinks,
+#contact {
   @extend %padding-top-bottom;
   h2 {
     margin-bottom: 2rem;
   }
+}
+
+/* Contact */
+
+#contact button {
+  margin-bottom: 2rem;
+}
+
+/* Table */
+
+.table .thead-light th {
+  color: $black;
+  background-color: $white;
+  border-color: $white;
+}
+
+.table thead th {
+  border-bottom: 2px solid $white;
+}
+.table td,
+.table th {
+  border-top: 1px solid $white;
+}
+
+/* Forms */
+
+.btn-yellow {
+  background-color: $yellow;
+  box-shadow: $shadow;
+  @extend %transition;
+}
+
+.btn:hover,
+.btn:focus {
+  background: $yellow2;
+  box-shadow: $shadow2;
+}
+
+.form-control {
+  background-color: $white;
+  box-shadow: $shadow;
+  @extend %transition;
+}
+
+.form-control:focus {
+  background-color: $white2;
+  border-color: $selection;
+  box-shadow: 0 1px 1px $selection inset, 0 0 8px $selection;
+  outline: 0 none;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(3rem + 4px);
+}
+
+/* Images */
+
+img {
+  border: 0.5rem solid $white2;
+  box-shadow: $shadow;
 }
 
 /* Footer */
@@ -201,19 +271,27 @@ footer {
 
   .copyright {
     @extend %uppercase;
-    text-align: right;
   }
 
   .social-icons {
     display: inline-block;
-
-    svg {
+    a {
+      color: transparent;
       margin-right: 1rem;
-      box-shadow: $shadow;
     }
 
-    svg:last-child {
+    a:last-child {
       margin: 0;
+    }
+
+    svg {
+      box-shadow: $shadow;
+      @extend %transition;
+    }
+
+    svg:hover,
+    svg:focus {
+      box-shadow: $shadow2;
     }
   }
 }
